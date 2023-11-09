@@ -355,6 +355,45 @@
           }
         }
       },
+      "statistics": {
+        "$id": "#/items/properties/statistics",
+        "type": "array",
+        "title": "Statistics section",
+        "description": "An array of entries corresponding to the reported statistics of the simple effects.",
+        "additionalItems": true,
+        "properties": {
+          "N400timewin": {
+            "$id": "#/items/properties/procedure/properties/N400tw",
+            "type": "string",
+            "title": "N400 time window",
+            "description": "Time window for the N400 analysis (interval: min max)."
+          },
+          "Fstatistics": {
+            "$id": "#/items/properties/procedure/properties/Ftest",
+            "type": "number",
+            "title": "Ftest",
+            "description": "Value of the F test."
+          },
+          "tstatistics": {
+            "$id": "#/items/properties/procedure/properties/ttest",
+            "type": "number",
+            "title": "ttest",
+            "description": "Value of the t test."
+          },
+          "degrees of freedom": {
+            "$id": "#/items/properties/procedure/properties/df",
+            "type": "number",
+            "title": "degrees of freedom",
+            "description": "degrees of freedom for F or t test."
+          },
+          "subset of electrodes": {
+            "$id": "#/items/properties/procedure/properties/subsetsites",
+            "type": "string",
+            "title": "sites of the test",
+            "description": "Describe which electrodes were used to conduct the simple effect"
+          }
+        }
+      }, 
       "data": {
       "$id": "#/items/properties/data",
       "type": "array",
