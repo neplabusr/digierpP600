@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema",
-  "$id": "https://raw.githubusercontent.com/neplabusr/digierpP600/main/digERPs_pragmaP600.schema.json",
+  "$id": "https://raw.githubusercontent.com/francesco-vespignani/digERPs/master/templates/digERPs_frontalPNP.schema.json",
   "type": "array",
   "title": "A schema template for the systematic review of the Pragmatic P600",
   "description": "This file aims at aiding the digitalization of ERP papers on figurative language. A number of ERPs papers on figurative language processing are considered by looking at contrasts between figurative and literal/control condtitions. Papers often contain multiple experiments, please add an element array for each experiment, in this case the field expname becomes required.",
@@ -262,11 +262,12 @@
             "type": "string",
             "title": "Requested task",
             "description": "The behavioral task which subjects were requested to perform.",
-            "examples": [
+            "enum": [
                 "silent reading",
                 "reading for comprhension",
                 "comprehension questions",
-                "word monitoring"
+                "word monitoring",
+                "acceptability"
               ]
           },
           "lists": {
@@ -357,40 +358,48 @@
       },
       "statistics": {
         "$id": "#/items/properties/statistics",
-        "type": "array",
+        "type": "object",
         "title": "Statistics section",
         "description": "An array of entries corresponding to the reported statistics of the simple effects.",
-        "additionalItems": true,
+        "additionalProperties": true,
+        "required": [
+          "N400timewin"
+        ],
         "properties": {
           "N400timewin": {
-            "$id": "#/items/properties/procedure/properties/N400tw",
+            "$id": "#/items/properties/statistics/properties/N400tw",
             "type": "string",
-            "title": "N400 time window",
+            "title": "N400_tw",
             "description": "Time window for the N400 analysis (interval: min max)."
           },
-          "Fstatistics": {
-            "$id": "#/items/properties/procedure/properties/Ftest",
-            "type": "number",
-            "title": "Ftest",
-            "description": "Value of the F test."
+          "statistic test": {
+            "$id": "#/items/properties/statistics/properties/test",
+            "type": "string",
+            "title": "which test",
+            "description": "choose if F or t test.",
+            "enum": [
+              "F test",
+              "t test",
+              "different"
+            ]
           },
-          "tstatistics": {
-            "$id": "#/items/properties/procedure/properties/ttest",
+          "value of test": {
+            "$id": "#/items/properties/statistics/properties/value",
             "type": "number",
-            "title": "ttest",
-            "description": "Value of the t test."
+            "title": "value",
+            "description": "Value of the test."
           },
           "degrees of freedom": {
-            "$id": "#/items/properties/procedure/properties/df",
+            "$id": "#/items/properties/statistics/properties/df",
             "type": "number",
             "title": "degrees of freedom",
             "description": "degrees of freedom for F or t test."
           },
           "subset of electrodes": {
-            "$id": "#/items/properties/procedure/properties/subsetsites",
+            "$id": "#/items/properties/statistics/properties/subsetsites",
             "type": "string",
             "title": "sites of the test",
-            "description": "Describe which electrodes were used to conduct the simple effect"
+            "description": "Describe which electrodes were used to conduct the simple effect."
           }
         }
       }, 
