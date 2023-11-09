@@ -1,0 +1,72 @@
+[
+  {
+    "paperid": "",
+    "expname": "",
+    "content": "",
+    "phenomenon": "",
+    
+    "eeg": {
+      "recording reference": "",
+      "analysis reference": "",
+      "sampling rate": 0,
+      "plot final low pass": 0,
+      "plot final high pass": 0,
+      "epoch rejection": "",
+      "mean rejected": 0,
+      "sites nomenclature": "",
+      "sites": [
+        "",
+        ""
+      ],
+      "baseline": "",
+      "plotted epoch": "",
+      "hardware": "",
+      "active electrodes": false
+    },
+    "subjects": [
+      {
+        "groupname": "",
+        "n": -1,
+        "mean age": -1,
+        "age range": "",
+        "num of females": -1,
+        "language(s) spoken": "",
+        "description": ""
+      }
+    ],
+    "procedure": {
+      "language": "",
+      "modality": "",
+      "typeofmanipulation": "",
+      "task": "",
+      "lists": "",
+      "counterbalancement":"",
+      "word duration": 0,
+      "woa": "",
+      "linguisticfeatures":"",
+      "conditions": [
+        {
+          "condname": "",
+          "cp": "",
+          "items": 0,
+          "description": "",
+          "example": "",
+          "wp": "",
+          "linear wp": ""
+        }
+      ]
+    },
+    "data": [
+      {
+        "condition": "",
+        "subjects": "",
+        "time": "",
+        "figure": "",
+        "figuredoi": "",
+        "page": "",
+        "color": "",
+        "type": ""
+      }
+    ]
+  }
+]
