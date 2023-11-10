@@ -104,7 +104,7 @@
               "$id": "#/items/properties/eeg/properties/mean%20rejected",
               "type": "number",
               "title": "Mean rejected",
-              "description": "The proportion of trials removed by the artifact rejection procedure (for each condition, if available), should be a number between 0 and 1."
+              "description": "The proportion of trials removed by the artifact rejection procedure (average across conditions, or for each condition if available), should be a number between 0 and 1."
             },
             "sites nomenclature": {
               "$id": "#/items/properties/eeg/properties/sites%20numenclature",
@@ -130,6 +130,12 @@
               "type": "string",
               "title": "Baseline",
               "description": "The interval used for the baseline of the ERPs with reference to the onset of the critical word. It should in the form \"MIN, MAX\" in ms. In the case different baselines are used for different conditions or target words please add a field \"note on baseline\"."
+            },
+            "epoch": {
+              "$id": "#/items/properties/eeg/properties/wholeepoch",
+              "type": "string",
+              "title": "ERP epoch",
+              "description": "the time range of the ERP epoch on which rejection has been done. It should in the form \"MIN, MAX\" in ms."
             },
             "plotted epoch": {
               "$id": "#/items/properties/eeg/properties/epoch",
@@ -252,7 +258,7 @@
             "title": "Type of manipulation",
             "description": "Choose which type of manipulation was carried out (same prefix, same target, different prefix and target)",
             "enum": [
-              "seme prefix",
+              "same prefix",
               "same target",
               "different prefix and target"
             ]
@@ -264,10 +270,34 @@
             "description": "The behavioral task which subjects were requested to perform.",
             "enum": [
                 "silent reading",
-                "reading for comprhension",
+                "reading for comprehension",
                 "comprehension questions",
                 "word monitoring",
                 "acceptability"
+              ]
+          },
+          "context": {
+            "$id": "#/items/properties/procedure/properties/context",
+            "type": "string",
+            "title": "Sentential context",
+            "description": "Info about the context in which expressions are embedded.",
+            "enum": [
+                "single sentence - minimal (<8 words)",
+                "single sentence - non minimal (>8 words)",
+                "mini-discourse",
+                "naturalistic"
+              ]
+          },
+          "wordtype": {
+            "$id": "#/items/properties/procedure/properties/wordtype",
+            "type": "string",
+            "title": "critical word type",
+            "description": "Info about the type of target word.",
+            "enum": [
+                "noun",
+                "adjective",
+                "verb",
+                "mix"
               ]
           },
           "lists": {
@@ -275,6 +305,12 @@
             "type": "string",
             "title": "Lists",
             "description": "The number of different lists can also be reported."
+          },
+          "fillers": {
+            "$id": "#/items/properties/procedure/properties/fillers",
+            "type": "number",
+            "title": "fillers",
+            "description": "The proportion of filler sentences in the whole set of materials."
           },
           "counterbalancement": {
             "$id": "#/items/properties/procedure/properties/counterbalancement",
@@ -394,6 +430,12 @@
             "type": "number",
             "title": "degrees of freedom",
             "description": "degrees of freedom for F or t test."
+          },
+          "reported amplitude": {
+            "$id": "#/items/properties/statistics/properties/amplitude",
+            "type": "number",
+            "title": "reported amplitude",
+            "description": "size of the ERP difference in micro Volts."
           },
           "subset of electrodes": {
             "$id": "#/items/properties/statistics/properties/subsetsites",
