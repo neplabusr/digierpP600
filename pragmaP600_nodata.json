@@ -19,6 +19,7 @@
         ""
       ],
       "baseline": "",
+      "epoch": "",
       "plotted epoch": "",
       "hardware": "",
       "active electrodes": false
@@ -39,7 +40,10 @@
       "modality": "",
       "typeofmanipulation": "",
       "task": "",
+      "context": "",
+      "wordtype": "",
       "lists": "",
+      "fillers": "",
       "counterbalancement":"",
       "word duration": 0,
       "woa": "",
@@ -62,7 +66,9 @@
             "statistic test":"",
             "value":"",
             "degrees of freedom":"",
+            "reported amplitude":"",
             "subset of electrodes":""
+
         }
     ],
     "data": [
