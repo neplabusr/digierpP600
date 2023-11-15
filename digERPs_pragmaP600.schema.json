@@ -82,6 +82,24 @@
               "title": "Sampling rate",
               "description": "Samplig rate of the EEG recording in Hz (number of EEG points per second)."
             },
+            "low pass": {
+              "$id": "#/items/properties/eeg/properties/low%20pass",
+              "type": "number",
+              "title": "Low Pass filter",
+              "description": "The cutoff frequency in Hz of the more severe low pass filter applied to the data for preprocessing (steepness is often not reported)"
+            },
+            "high pass": {
+              "$id": "#/items/properties/eeg/properties/high%20pass",
+              "type": "number",
+              "title": "High Pass filter",
+              "description": "The cutoff frequency in Hz of the more severe high pass filter applied to the data for preprocessing  (steepness is often not reported)"
+            },
+            "steepness": {
+              "$id": "#/items/properties/eeg/properties/steepness",
+              "type": "number",
+              "title": "Filter steepness",
+              "description": "Values describing steepness (typically in db/oct. Fill -1 if info is not given"
+            },            
             "plot final low pass": {
               "$id": "#/items/properties/eeg/properties/plot%20low%20pass",
               "type": "number",
@@ -331,7 +349,7 @@
           "linguisticfeatures": {
             "$id": "#/items/properties/procedure/properties/linguisticfeatures",
             "title": "Linguistic features",
-            "description": "Additional variables measured on the target word (with values for each condition, following alphabetic order of conditions): e.g., cloze probability [0.08, 0.03] for cond 0 and cond 1"
+            "description": "Additional variables measured on the target word (with values for literal and figurative conditions, following alphabetic order of conditions): e.g., cloze probability \"COND_A, COND_B\" for cond 0 and cond 1"
           },
           "conditions": {
             "$id": "#/items/properties/procedure/properties/conditions",
@@ -383,9 +401,9 @@
                   },
                   "linear position": {
                     "$id": "#/items/properties/procedure/properties/conditions/items/properties/wp",
-                    "type": "string",
+                    "type": "number",
                     "title": "Linear Word Position",
-                    "description": "Target word position in the sentence (in number of words from the beginning)."
+                    "description": "Target word position in the sentence (in number of words from the beginning). Put -1 if not given"
                   }
                 }
               }

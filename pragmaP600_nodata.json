@@ -9,6 +9,9 @@
       "recording reference": "",
       "analysis reference": "",
       "sampling rate": 0,
+      "low pass": 0,
+      "high pass": 0,
+      "steepness": -1,    
       "plot final low pass": 0,
       "plot final high pass": 0,
       "epoch rejection": "",
@@ -56,7 +59,7 @@
           "description": "",
           "example": "",
           "wp": "",
-          "linear wp": ""
+          "linear wp": -1
         }
       ]
     },
