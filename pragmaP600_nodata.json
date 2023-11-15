@@ -63,17 +63,14 @@
         }
       ]
     },
-    "statistics":[
-        {
+    "statistics": {
             "N400timewin":"",
             "statistic test":"",
             "value":"",
             "degrees of freedom":"",
             "reported amplitude":"",
             "subset of electrodes":""
-
-        }
-    ],
+        },
     "data": [
       {
         "condition": "",
