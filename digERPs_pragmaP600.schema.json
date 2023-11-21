@@ -433,18 +433,15 @@
         "title": "Statistics section",
         "description": "An array of entries corresponding to the reported statistics of the simple effects.",
         "additionalProperties": true,
-        "required": [
-          "N400timewin"
-        ],
         "properties": {
-          "N400timewin": {
+          "N400: timewin": {
             "$id": "#/items/properties/statistics/properties/N400tw",
             "type": "string",
             "title": "N400_tw",
-            "description": "Time window for the N400 analysis (interval: min max)."
+            "description": "Time window for the N400 analysis (interval: min max). Fill with -1 if not given."
           },
-          "statistic test": {
-            "$id": "#/items/properties/statistics/properties/test",
+          "N400: statistic test": {
+            "$id": "#/items/properties/statistics/properties/N4test",
             "type": "string",
             "title": "which test",
             "description": "choose if F or t test.",
@@ -454,26 +451,67 @@
               "different"
             ]
           },
-          "value of test": {
-            "$id": "#/items/properties/statistics/properties/value",
+          "N400: value of test": {
+            "$id": "#/items/properties/statistics/properties/N4svalue",
             "type": "number",
             "title": "value",
-            "description": "Value of the test."
+            "description": "Value of the test. Fill with -1 if not given."
           },
-          "degrees of freedom": {
-            "$id": "#/items/properties/statistics/properties/df",
+          "N400: degrees of freedom": {
+            "$id": "#/items/properties/statistics/properties/N4df",
             "type": "number",
             "title": "degrees of freedom",
-            "description": "degrees of freedom for F or t test."
+            "description": "degrees of freedom for F or t test. Fill with -1 if not given."
           },
-          "reported amplitude": {
-            "$id": "#/items/properties/statistics/properties/amplitude",
+          "N400: reported amplitude": {
+            "$id": "#/items/properties/statistics/properties/N4amplitude",
             "type": "number",
             "title": "reported amplitude",
-            "description": "size of the ERP difference in micro Volts."
+            "description": "size of the ERP difference in micro Volts. Fill with -1 if not given."
           },
-          "subset of electrodes": {
-            "$id": "#/items/properties/statistics/properties/subsetsites",
+          "N400: subset of electrodes": {
+            "$id": "#/items/properties/statistics/properties/N4subsetsites",
+            "type": "string",
+            "title": "sites of the test",
+            "description": "Describe which electrodes were used to conduct the simple effect."
+          },
+          "P600: timewin": {
+            "$id": "#/items/properties/statistics/properties/P600tw",
+            "type": "string",
+            "title": "P600_tw",
+            "description": "Time window for the P6 analysis (interval: min max). Fill with -1 if not given."
+          },
+          "P600: statistic test": {
+            "$id": "#/items/properties/statistics/properties/P600test",
+            "type": "string",
+            "title": "which test",
+            "description": "choose if F or t test.",
+            "enum": [
+              "F test",
+              "t test",
+              "different"
+            ]
+          },
+          "P600: value of test": {
+            "$id": "#/items/properties/statistics/properties/P6svalue",
+            "type": "number",
+            "title": "value",
+            "description": "Value of the test. Fill with -1 if not given."
+          },
+          "P600: degrees of freedom": {
+            "$id": "#/items/properties/statistics/properties/P6df",
+            "type": "number",
+            "title": "degrees of freedom",
+            "description": "degrees of freedom for F or t test. Fill with -1 if not given."
+          },
+          "P600: reported amplitude": {
+            "$id": "#/items/properties/statistics/properties/P6amplitude",
+            "type": "number",
+            "title": "reported amplitude",
+            "description": "size of the ERP difference in micro Volts. Fill with -1 if not given."
+          },
+          "P600: subset of electrodes": {
+            "$id": "#/items/properties/statistics/properties/P6subsetsites",
             "type": "string",
             "title": "sites of the test",
             "description": "Describe which electrodes were used to conduct the simple effect."

@@ -65,12 +65,18 @@
       ]
     },
     "statistics": {
-            "N400timewin":"",
-            "statistic test":"",
-            "value":"",
-            "degrees of freedom":"",
-            "reported amplitude":"",
-            "subset of electrodes":""
+            "N400: timewin":"",
+            "N400: statistic test":"",
+            "N400: value of test":"",
+            "N400: degrees of freedom":"",
+            "N400: reported amplitude":"",
+            "N400: subset of electrodes":"",
+            "P600: timewin":"",
+            "P600: statistic test":"",
+            "P600: value of test":"",
+            "P600: degrees of freedom":"",
+            "P600: reported amplitude":"",
+            "P600: subset of electrodes":""
         },
     "data": [
       {
