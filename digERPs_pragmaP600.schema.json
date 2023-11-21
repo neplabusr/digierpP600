@@ -104,13 +104,13 @@
               "$id": "#/items/properties/eeg/properties/plot%20low%20pass",
               "type": "number",
               "title": "Plot Low Pass filter",
-              "description": "The cutoff frequency in Hz of the more severe low pass filter applied to the data prior to the plot (steepness is often not reported)"
+              "description": "The cutoff frequency in Hz of the more severe low pass filter applied to the data prior to the plot. Fill -1 if info is not given"
             },
             "plot final high pass": {
               "$id": "#/items/properties/eeg/properties/plot%20high%20pass",
               "type": "number",
               "title": "Plot High Pass filter",
-              "description": "The cutoff frequency in Hz of the more severe high pass filter applied to the data prior to the plot  (steepness is often not reported)"
+              "description": "The cutoff frequency in Hz of the more severe high pass  filter applied to the data prior to the plot. Fill -1 if info is not given"
             },
             "epoch rejection": {
               "$id": "#/items/properties/eeg/properties/epoch%20rejection",
@@ -122,7 +122,7 @@
               "$id": "#/items/properties/eeg/properties/mean%20rejected",
               "type": "number",
               "title": "Mean rejected",
-              "description": "The proportion of trials removed by the artifact rejection procedure (average across conditions, or for each condition if available), should be a number between 0 and 1."
+              "description": "The proportion of trials removed by the artifact rejection procedure: annotate average across conditions, or for each condition \"0.08, 0.13\" when available. Its should be a number between 0 and 1. Fill -1 if info is not given"
             },
             "sites nomenclature": {
               "$id": "#/items/properties/eeg/properties/sites%20numenclature",
@@ -234,7 +234,18 @@
                 "$id": "#/items/properties/subjects/items/properties/description",
                 "type": "string",
                 "title": "Group Description",
-                "description": "Report information about the group, including info especially when participants are not all right-handed or about vision, hearing capability, cognitive and neurological state."
+                "description": "Report information about the group, including info especially about handedness, vision, hearing capability, cognitive and neurological state."
+              },
+              "handedness": {
+                "$id": "#/items/properties/subjects/items/properties/handedness",
+                "type": "string",
+                "title": "Handedness",
+                "description": "Choose if handedness is assessed by asking or with Edinburgh handedness questionnaire",
+                "enum":[
+                 "N of Left/Right hand",
+                 "Reference to Edinburgh questionnaire",
+                 "Unkown" 
+                ]
               }
             }
           }
@@ -334,7 +345,12 @@
             "$id": "#/items/properties/procedure/properties/counterbalancement",
             "type": "string",
             "title": "Counterbalancement",
-            "description": "A textual description of the type of counterbalancement of material across participants (e.g. latin square design, fully crossed, repetition). "
+            "description": "Type of counterbalancement of material across participants (e.g. latin square design, fully crossed, repetition). ",
+            "enum": [
+              "fully counterbalanced",
+              "repetition",
+              "other"
+            ]
           },
           "word duration": {
             "$id": "#/items/properties/procedure/properties/word%20duration",
@@ -351,6 +367,7 @@
             "title": "Linguistic features",
             "description": "Additional variables measured on the target word (with values for literal and figurative conditions, following alphabetic order of conditions): e.g., cloze probability \"COND_A, COND_B\" for cond 0 and cond 1"
           },
+
           "conditions": {
             "$id": "#/items/properties/procedure/properties/conditions",
             "type": "array",
