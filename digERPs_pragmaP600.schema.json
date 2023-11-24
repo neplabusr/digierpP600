@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema",
-  "$id": "https://raw.githubusercontent.com/francesco-vespignani/digERPs/master/templates/digERPs_frontalPNP.schema.json",
+  "$id": "https://raw.githubusercontent.com/neplabusr/digierpP600/main/digERPs_pragmaP600.schema.json",
   "type": "array",
   "title": "A schema template for the systematic review of the Pragmatic P600",
   "description": "This file aims at aiding the digitalization of ERP papers on figurative language. A number of ERPs papers on figurative language processing are considered by looking at contrasts between figurative and literal/control condtitions. Papers often contain multiple experiments, please add an element array for each experiment, in this case the field expname becomes required.",
@@ -213,7 +213,7 @@
                 "$id": "#/items/properties/subjects/items/properties/groupname",
                 "type": "string",
                 "title": "A label for this group",
-                "description": "A short and possibly informative label of the group of subjects. I would say \"adults\", most typically,"
+                "description": "A short and possibly informative label of the group of subjects. I would say \"adults\", most typically"
               },
               "n": {
                 "$id": "#/items/properties/subjects/items/properties/n",
