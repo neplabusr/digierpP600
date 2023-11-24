@@ -221,8 +221,8 @@
                 "title": "Number of subjects",
                 "description": "An integer: the number of subject recruited in the study. Put -1 if the information is not provided. If different subjects were used for different conditions or target words please add a field \"note on n\""
               },
-              "final n": {
-                "$id": "#/items/properties/subjects/items/properties/final n",
+              "finaln": {
+                "$id": "#/items/properties/subjects/items/properties/finaln",
                 "type": "integer",
                 "title": "Final number of subjects",
                 "description": "An integer: the number of subject included in the final analysis (subtract exclusions from the initial sample, due to preprocessing or further criteria). Put -1 if the information is not provided."
