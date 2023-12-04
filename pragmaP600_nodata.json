@@ -16,7 +16,8 @@
       "plot final high pass": 0,
       "epoch rejection": "",
       "mean rejected": 0,
-      "sites nomenclature": "",
+      "NUmber of electrodes": 0,
+      "n_sites": 0,
       "sites": [
         "",
         ""
@@ -25,7 +26,8 @@
       "epoch": "",
       "plotted epoch": "",
       "hardware": "",
-      "active electrodes": false
+      "active electrodes": false,
+      "lab_env": false
     },
     "subjects": [
       {

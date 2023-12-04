@@ -139,6 +139,12 @@
               "title": "Mean rejected",
               "description": "The proportion of trials removed by the artifact rejection procedure: annotate average across conditions, or for each condition \"0.08, 0.13\" when available. Its should be a number between 0 and 1. Fill -1 if info is not given"
             },
+            "n_sites": {
+              "$id": "#/items/properties/eeg/properties/n_sites",
+              "type": "number",
+              "title": "Number of electrodes",
+              "description": "Number of electrodes placed on the scalp (EOG and reference excluded)"
+            },
             "sites nomenclature": {
               "$id": "#/items/properties/eeg/properties/sites%20numenclature",
               "type": "string",
@@ -187,7 +193,14 @@
               "type": "boolean",
               "title": "Active electrodes",
               "description": "Active electrodes  were used (true/false)"
+            },
+            "lab_env": {
+              "$id": "#/items/properties/eeg/properties/lab_env",
+              "type": "boolean",
+              "title": "Faraday cage",
+              "description": "Electrical shielding was used (true/false)"
             }
+
           }
       },
       "subjects": {
@@ -367,7 +380,7 @@
             "$id": "#/items/properties/procedure/properties/lists",
             "type": "number",
             "title": "Lists",
-            "description": "The number of different lists can also be reported."
+            "description": "The number of different lists can also be reported. -1 if information is not given explicitly"
           },
           "fillers": {
             "$id": "#/items/properties/procedure/properties/fillers",
@@ -382,8 +395,8 @@
             "description": "Type of counterbalancement of material across participants (e.g. latin square design, fully crossed, repetition). ",
             "enum": [
               "fully counterbalanced",
-              "repetition",
-              "other"
+              "repetition within participants",
+              "not enough information"
             ]
           },
           "word duration": {
