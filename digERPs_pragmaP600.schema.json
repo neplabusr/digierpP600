@@ -111,7 +111,7 @@
             },
             "steepness": {
               "$id": "#/items/properties/eeg/properties/steepness",
-              "type": "number",
+              "type": "string",
               "title": "Filter steepness",
               "description": "Values describing the filters' steepness (typically in db/oct). Fill -1 if info is not given (this may often happen)"
             },            
@@ -135,9 +135,9 @@
             },
             "mean rejected": {
               "$id": "#/items/properties/eeg/properties/mean%20rejected",
-              "type": "number",
+              "type": "string",
               "title": "Mean rejected",
-              "description": "The proportion of trials removed by the artifact rejection procedure: annotate average across conditions, or for each condition \"0.08, 0.13\" when available. Its should be a number between 0 and 1. Fill -1 if info is not given"
+              "description": "The proportion of trials removed by the artifact rejection procedure: annotate average across conditions, or for each condition \"0.08, 0.13\" when available. Its should be a number (or a set of numbers) between 0 and 1. Fill -1 if info is not given"
             },
             "n_sites": {
               "$id": "#/items/properties/eeg/properties/n_sites",
@@ -394,6 +394,7 @@
             "title": "Counterbalancement",
             "description": "Type of counterbalancement of material across participants (e.g. latin square design, fully crossed, repetition). ",
             "enum": [
+              "all presented once",
               "fully counterbalanced",
               "repetition within participants",
               "not enough information"
@@ -593,8 +594,6 @@
         "additionalProperties": true,
         "required": [
           "condition",
-          "subjects",
-          "time",
           "figure",
           "color",
           "type"
@@ -606,29 +605,11 @@
             "title": "Condition label",
             "description": "A condition label instantiated above in the procedure section."
           },
-          "subjects": {
-            "$id": "#/items/properties/data/items/properties/subjects",
-            "type": "string",
-            "title": "Group label",
-            "description": "An subject-group label instantiated above in the subjects section."
-          },
-          "time": {
-            "$id": "#/items/properties/data/items/properties/time",
-            "type": "string",
-            "title": "Time Range",
-            "description": "The (maximum) time range of the plotted data,  should be in the form \"MIN, MAX\"."
-          },
           "figure": {
             "$id": "#/items/properties/data/items/properties/figure",
             "type": "string",
             "title": "Figure label",
             "description": "A short label for the  figure from which the specific waveform should be extracted. Should be in the form \"fig[N][A]\", where N  in an integer and A an optional letter (e.g. \"fig1A\").  This label should match both the description in the paper and the name of the image file to be used for the digitalization (e.g \"fig1A.png\"."
-          },
-          "page": {
-            "$id": "#/items/properties/data/items/properties/page",
-            "type": "string",
-            "title": "Page number",
-            "description": "The number of the page in which the figure appears."
           },
           "color": {
             "$id": "#/items/properties/data/items/properties/color",

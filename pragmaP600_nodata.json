@@ -16,7 +16,6 @@
       "plot final high pass": 0,
       "epoch rejection": "",
       "mean rejected": 0,
-      "NUmber of electrodes": 0,
       "n_sites": 0,
       "sites": [
         "",
@@ -85,11 +84,8 @@
     "data": [
       {
         "condition": "",
-        "subjects": "",
-        "time": "",
         "figure": "",
         "figuredoi": "",
-        "page": "",
         "color": "",
         "type": ""
       }
