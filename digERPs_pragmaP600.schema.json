@@ -358,6 +358,7 @@
             "title": "Sentential context",
             "description": "Info about the context in which expressions are embedded.",
             "enum": [
+                "two-words paradigm",
                 "single sentence - minimal (<8 words)",
                 "single sentence - non minimal (>8 words)",
                 "mini-discourse",
