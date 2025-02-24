@@ -583,7 +583,6 @@
         "type": "array",
         "title": "Data section",
         "description": "An array of entries corresponding to plotted waveforms with information about where these can be found.",
-        "additionalItems": true,
         "items": {
           "$id": "#/items/properties/data/items",
           "type": "object",
