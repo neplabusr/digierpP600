@@ -4,7 +4,6 @@
   "type": "array",
   "title": "A schema template for the systematic review of the Pragmatic P600",
   "description": "This file aims at aiding the digitalization of ERP papers on figurative language. A number of ERPs papers on figurative language processing are considered by looking at contrasts between figurative and literal/control condtitions. Papers often contain multiple experiments, please add an element array for each experiment, in this case the field expname becomes required.",
-  "additionalItems": true,
 
   "items": [
     {
@@ -630,7 +629,8 @@
       }
     }
   }
-]
+],
+"additionalItems": true
 }
 
 
