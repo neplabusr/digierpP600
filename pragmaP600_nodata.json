@@ -7,7 +7,7 @@
     "name of figures": "",
     "eeg": {
       "recording reference": "",
-      "analysis reference": "",
+      "analysis reference": "left mastoid",
       "sampling rate": 0,
       "low pass": 0,
       "high pass": 0,
@@ -15,8 +15,9 @@
       "plot final low pass": 0,
       "plot final high pass": 0,
       "epoch rejection": "",
-      "mean rejected": 0,
+      "mean rejected": "",
       "n_sites": 0,
+      "sites nomenclature":"",
       "sites": [
         "",
         ""
@@ -38,22 +39,22 @@
         "num of females": -1,
         "language(s) spoken": "",
         "description": "",
-        "handedness":""
+        "handedness":"Unkown"
       }
     ],
     "procedure": {
       "language": "",
-      "modality": "",
-      "typeofmanipulation": "",
-      "task": "",
-      "task persistence": "",
-      "context": "",
-      "wordtype": "",
-      "lists": "",
-      "fillers": "",
-      "counterbalancement":"",
+      "modality": "other",
+      "typeofmanipulation": "same prefix",
+      "task": "comprehension questions",
+      "task persistence": "no task",
+      "context": "dialogue",
+      "wordtype": "mix",
+      "lists": 0,
+      "fillers": 0,
+      "counterbalancement":"not enough information",
       "word duration": 0,
-      "woa": "",
+      "woa": 0,
       "linguisticfeatures":"",
       "conditions": [
         {
@@ -61,34 +62,27 @@
           "items": 0,
           "description": "",
           "example": "",
-          "wp": "",
+          "wp": "other",
           "linear position": -1
         }
       ]
     },
     "statistics": {
-            "framework":"",
+            "framework":"ANOVA",
             "N400: timewin":"",
-            "N400: statistic test":"",
-            "N400: value of test":"",
+            "N400: statistic test":"other",
+            "N400:simpleeffect":false,
+            "N400: value of test":1000,
             "N400: degrees of freedom":"",
-            "N400: reported amplitude":"",
+            "N400: reported amplitude":1000,
             "N400: subset of electrodes":"",
             "P600: timewin":"",
-            "P600: statistic test":"",
-            "P600: value of test":"",
+            "P600:simpleeffect":false,
+            "P600: statistic test":"other",
+            "P600: value of test":1000,
             "P600: degrees of freedom":"",
-            "P600: reported amplitude":"",
+            "P600: reported amplitude":1000,
             "P600: subset of electrodes":""
-        },
-    "data": [
-      {
-        "condition": "",
-        "figure": "",
-        "figuredoi": "",
-        "color": "",
-        "type": ""
-      }
-    ]
+    }
   }
 ]
